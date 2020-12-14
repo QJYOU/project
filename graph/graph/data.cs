@@ -112,6 +112,15 @@ namespace graph
             rd = cmd.ExecuteReader();
             rd.Read();
         }
+
+        public void con()
+        {
+            rd = cmd.ExecuteReader();
+        }
+        public bool next()
+        {
+            return rd.NextResult();
+        }
         public void disconnect()
         {
             rd.Close();
