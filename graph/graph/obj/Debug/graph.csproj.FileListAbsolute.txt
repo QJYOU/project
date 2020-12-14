@@ -22,3 +22,15 @@ C:\Users\ee258\Desktop\groupProject\graph\graph\obj\Debug\graph.csproj.GenerateR
 C:\Users\ee258\Desktop\groupProject\graph\graph\obj\Debug\graph.csproj.CoreCompileInputs.cache
 C:\Users\ee258\Desktop\groupProject\graph\graph\obj\Debug\graph.exe
 C:\Users\ee258\Desktop\groupProject\graph\graph\obj\Debug\graph.pdb
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\bin\Debug\graph.exe.config
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\bin\Debug\graph.exe
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\bin\Debug\graph.pdb
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.csprojAssemblyReference.cache
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.Form1.resources
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.Properties.Resources.resources
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.csproj.GenerateResource.cache
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.csproj.CoreCompileInputs.cache
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.exe
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\obj\Debug\graph.pdb
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\bin\Debug\dataserver.mdf
+C:\Users\ee258\Desktop\groupProject\project\graph\graph\bin\Debug\dataserver_log.ldf
