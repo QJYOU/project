@@ -47,7 +47,7 @@ namespace graph
             BegindatePicker.Visible = true;
             EnddatePicker.Visible = true;
             piechart.Visible = false;
-            calories_Chart.Visible = false;
+            line_Chart.Visible = false;
             datePickbutton.Enabled = false;
 
             BeginDate=BegindatePicker.Value.Year.ToString() + BegindatePicker.Value.Month.ToString() + BegindatePicker.Value.Day.ToString();
@@ -78,7 +78,7 @@ namespace graph
                 double protein_avg = 0;
                 double fat_avg = 0;
                 double sugar_avg = 0;
-                calories_Chart.Visible = false;
+                line_Chart.Visible = false;
 
                 for (int i = 0; i < list[0].Count; ++i)
                 {
@@ -96,28 +96,28 @@ namespace graph
             //linechart
             if (comboBox1.SelectedIndex == 0)
             {
-                calories_Chart.Visible = true;
-                calories_Chart.Series[0].Points.DataBindXY(list[0], list[1]);
+                line_Chart.Visible = true;
+                line_Chart.Series[0].Points.DataBindXY(list[0], list[1]);
             }
             if (comboBox1.SelectedIndex == 1)
             {
-                calories_Chart.Visible = true;
-                calories_Chart.Series[0].Points.DataBindXY(list[0], list[2]);
+                line_Chart.Visible = true;
+                line_Chart.Series[0].Points.DataBindXY(list[0], list[2]);
             }
             if (comboBox1.SelectedIndex == 2)
             {
-                calories_Chart.Visible = true;
-                calories_Chart.Series[0].Points.DataBindXY(list[0], list[3]);
+                line_Chart.Visible = true;
+                line_Chart.Series[0].Points.DataBindXY(list[0], list[3]);
             }
             if (comboBox1.SelectedIndex == 3)
             {
-                calories_Chart.Visible = true;
-                calories_Chart.Series[0].Points.DataBindXY(list[0], list[4]);
+                line_Chart.Visible = true;
+                line_Chart.Series[0].Points.DataBindXY(list[0], list[4]);
             }
             if (comboBox1.SelectedIndex == 4)
             {
-                calories_Chart.Visible = true;
-                calories_Chart.Series[0].Points.DataBindXY(list[0], list[5]);
+                line_Chart.Visible = true;
+                line_Chart.Series[0].Points.DataBindXY(list[0], list[5]);
             }
 
             //clear list

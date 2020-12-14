@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            this.calories_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.line_Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.datePickbutton = new System.Windows.Forms.Button();
             this.BegindatePicker = new System.Windows.Forms.DateTimePicker();
             this.EnddatePicker = new System.Windows.Forms.DateTimePicker();
@@ -44,29 +44,29 @@
             this.piechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.calories_Chart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.line_Chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).BeginInit();
             this.SuspendLayout();
             // 
-            // calories_Chart
+            // line_Chart
             // 
-            this.calories_Chart.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.calories_Chart.ChartAreas.Add(chartArea5);
-            legend5.Enabled = false;
-            legend5.Name = "Legend1";
-            this.calories_Chart.Legends.Add(legend5);
-            this.calories_Chart.Location = new System.Drawing.Point(47, 124);
-            this.calories_Chart.Name = "calories_Chart";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.IsValueShownAsLabel = true;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.calories_Chart.Series.Add(series5);
-            this.calories_Chart.Size = new System.Drawing.Size(1080, 453);
-            this.calories_Chart.TabIndex = 1;
-            this.calories_Chart.Text = "Calories_Chart";
+            this.line_Chart.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.line_Chart.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.line_Chart.Legends.Add(legend1);
+            this.line_Chart.Location = new System.Drawing.Point(47, 124);
+            this.line_Chart.Name = "line_Chart";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsValueShownAsLabel = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.line_Chart.Series.Add(series1);
+            this.line_Chart.Size = new System.Drawing.Size(1080, 453);
+            this.line_Chart.TabIndex = 1;
+            this.line_Chart.Text = "line_Chart";
             // 
             // datePickbutton
             // 
@@ -118,28 +118,28 @@
             // piechart
             // 
             this.piechart.BackColor = System.Drawing.Color.Transparent;
-            chartArea6.Area3DStyle.Enable3D = true;
-            chartArea6.BackColor = System.Drawing.Color.Transparent;
-            chartArea6.Name = "ChartArea1";
-            this.piechart.ChartAreas.Add(chartArea6);
-            legend6.BackColor = System.Drawing.Color.Transparent;
-            legend6.Name = "Legend1";
-            this.piechart.Legends.Add(legend6);
+            chartArea2.Area3DStyle.Enable3D = true;
+            chartArea2.BackColor = System.Drawing.Color.Transparent;
+            chartArea2.Name = "ChartArea1";
+            this.piechart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Name = "Legend1";
+            this.piechart.Legends.Add(legend2);
             this.piechart.Location = new System.Drawing.Point(212, 98);
             this.piechart.Name = "piechart";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.Label = "#PERCENT";
-            series6.Legend = "Legend1";
-            series6.LegendText = "#VALX";
-            series6.Name = "Series1";
-            series6.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
-            this.piechart.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Label = "#PERCENT";
+            series2.Legend = "Legend1";
+            series2.LegendText = "#VALX";
+            series2.Name = "Series1";
+            series2.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            this.piechart.Series.Add(series2);
             this.piechart.Size = new System.Drawing.Size(770, 497);
             this.piechart.TabIndex = 0;
             this.piechart.Text = "chart1";
-            title3.Name = "Title1";
-            this.piechart.Titles.Add(title3);
+            title1.Name = "Title1";
+            this.piechart.Titles.Add(title1);
             // 
             // comboBox1
             // 
@@ -180,11 +180,11 @@
             this.Controls.Add(this.EnddatePicker);
             this.Controls.Add(this.BegindatePicker);
             this.Controls.Add(this.datePickbutton);
-            this.Controls.Add(this.calories_Chart);
+            this.Controls.Add(this.line_Chart);
             this.Controls.Add(this.piechart);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.calories_Chart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.line_Chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.piechart)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,7 +193,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart calories_Chart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart line_Chart;
         private System.Windows.Forms.Button datePickbutton;
         private System.Windows.Forms.DateTimePicker BegindatePicker;
         private System.Windows.Forms.DateTimePicker EnddatePicker;
