@@ -46,7 +46,7 @@ namespace graph
         }
         public void where_account(string name)
         {
-            sqlStr += "WHERE name = '" + name + "';";
+            sqlStr += "WHERE account = '" + name + "';";
         }
         public void delete(string name)
         {
@@ -56,7 +56,6 @@ namespace graph
         {
             sqlStr += "SELECT * FROM " + name + " ";
         }
-
         public void between(int a, int b)
         {
             sqlStr += "WHERE day BETWEEN " + a + " AND " + b;

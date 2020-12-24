@@ -17,16 +17,28 @@ namespace graph
         string BeginDate = "";
         string EndDate = "";
         data d = new data();
-
         int begin_date = 0;
         int end_date = 0;
         List<string>[] list = new List<string>[6];
+        double daily_calories;
+        double min_protein;
+        double max_protein;
+        double min_carbs;
+        double max_carbs;
+        double min_fat;
+        double max_fat;
+        List<double> daily_max_list = new List<double>();
+        List<double> daily_min_list = new List<double>();
         /* list[0] = date
          * list[1]= calories
          * list[2]=carbonhydrate
          * list[3]=protein
          * list[4]=fat
          * list[5]=sugar
+         * protein 12-20%
+         * carbs 45-60%
+         * fat20-35%
+         * sugar no  more than 150 calories
          */
         public Form1()
         {
@@ -54,6 +66,25 @@ namespace graph
             begin_date = int.Parse(BeginDate);
             EndDate = EnddatePicker.Value.Year.ToString() + EnddatePicker.Value.Month.ToString() + EnddatePicker.Value.Day.ToString();
             end_date = int.Parse(EndDate);
+
+            d.select("account_data");
+            d.where_account(account);
+            d.work();
+            d.connect();
+            daily_calories = Convert.ToDouble(d.rd[7]);
+            d.disconnect();
+            
+            min_protein = daily_calories * 0.12;
+            max_protein = daily_calories * 0.20;
+            min_carbs = daily_calories * 0.45;
+            max_carbs = daily_calories * 0.60;
+            min_fat = daily_calories * 0.20;
+            max_fat = daily_calories * 0.35;
+            line_Chart.Series[1].BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            line_Chart.Series[1].BorderWidth = 3;
+            line_Chart.Series[2].BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
+            line_Chart.Series[2].BorderWidth = 3;
+            line_Chart.Series[0].BorderWidth = 3;
         }
 
         private void BegindatePicker_ValueChanged(object sender, EventArgs e)
@@ -98,33 +129,65 @@ namespace graph
             {
                 line_Chart.Visible = true;
                 line_Chart.Series[0].Points.DataBindXY(list[0], list[1]);
+                for (int i = 0; i < list[0].Count; ++i)
+                    daily_max_list.Add(daily_calories);
+                line_Chart.Series[1].Points.DataBindXY(list[0], daily_max_list);     
+                
             }
             if (comboBox1.SelectedIndex == 1)
             {
                 line_Chart.Visible = true;
                 line_Chart.Series[0].Points.DataBindXY(list[0], list[2]);
+                for (int i = 0; i < list[0].Count; ++i)
+                {
+                    daily_max_list.Add(max_carbs);
+                    daily_min_list.Add(min_carbs);
+                }
+                line_Chart.Series[1].Points.DataBindXY(list[0], daily_max_list);
+                line_Chart.Series[2].Points.DataBindXY(list[0], daily_min_list);
+
             }
             if (comboBox1.SelectedIndex == 2)
             {
                 line_Chart.Visible = true;
                 line_Chart.Series[0].Points.DataBindXY(list[0], list[3]);
+                for (int i = 0; i < list[0].Count; ++i)
+                {
+                    daily_max_list.Add(max_protein);
+                    daily_min_list.Add(min_protein);
+                }
+                line_Chart.Series[1].Points.DataBindXY(list[0], daily_max_list);
+                line_Chart.Series[2].Points.DataBindXY(list[0], daily_min_list);
             }
             if (comboBox1.SelectedIndex == 3)
             {
                 line_Chart.Visible = true;
                 line_Chart.Series[0].Points.DataBindXY(list[0], list[4]);
+                for (int i = 0; i < list[0].Count; ++i)
+                {
+                    daily_max_list.Add(max_fat);
+                    daily_min_list.Add(min_fat);
+                }
+                line_Chart.Series[1].Points.DataBindXY(list[0], daily_max_list);
+                line_Chart.Series[2].Points.DataBindXY(list[0], daily_min_list);
             }
             if (comboBox1.SelectedIndex == 4)
             {
                 line_Chart.Visible = true;
                 line_Chart.Series[0].Points.DataBindXY(list[0], list[5]);
+                for (int i = 0; i < list[0].Count; ++i)
+                {
+                    daily_max_list.Add(150);
+                }
+                line_Chart.Series[1].Points.DataBindXY(list[0], daily_max_list);
             }
-
             //clear list
             for(int i=0;i<6;++i)
             {
                 list[i].Clear();
             }
+            daily_max_list.Clear();
+            daily_min_list.Clear();
         }
 
         private void EnddatePicker_ValueChanged(object sender, EventArgs e)
